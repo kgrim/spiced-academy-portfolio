@@ -1,0 +1,17 @@
+<div class="wholeLogin">
+
+    <h2 id="wellHello">Well...Hello again.</h2>
+    <h4 id="loginTitle">Log-in to proceed!</h4>
+
+    <div class="login">
+
+        <form method = "POST" action = '/login'>
+            <input name = 'email' placeholder = 'email' autocomplete="off">
+            <input name = 'password' placeholder = 'password' type="password" autocomplete="off">
+            <button type = 'submit'>submit</button>
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+          </form>
+
+    </div>
+</div>
+<a class="backLink" href="/register">Register</a>

@@ -1,0 +1,27 @@
+<img class="editImg" src="\czako_zagat_tinyfood.jpg" alt="http://www.czako.com/mike_czako_%7C_Google_%7C_Zagat_%7C_Tiny_Cafe.html" target="_blank">
+
+<div class="edit">
+<h2>Edit your Profile</h2>
+
+
+    <form method = "POST" action = '/editprofile'>
+        {{#each userInfo}}
+            <input name = 'name' placeholder = 'name' autocomplete="off" value="{{name}}">
+            <input name = 'surname' placeholder = 'surname' autocomplete="off" value="{{surname}}">
+            <input name = 'email' placeholder = 'email' autocomplete="off" value="{{email}}">
+            <input name = 'password' placeholder = 'password' type="password" autocomplete="off">
+            <input name = 'age' placeholder = 'age' autocomplete="off" value="{{age}}">
+            <input name = 'city' placeholder = 'city' autocomplete="off" value="{{city}}">
+            <input name = 'url' placeholder = 'url' autocomplete="off" value="{{url}}">
+            <button type = 'submit'>submit!</button>
+        {{/each}}
+
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+     </form>
+
+</div>
+
+<a class="backLink" href="/thankyou">back</a>
+
+
+<a class="logout" href="/logout">Logout</a>

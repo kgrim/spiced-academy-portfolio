@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Codystar|Share+Tech+Mono");
+
+* {
+    margin: 1%;
+    color: DIMGRAY;
+    font-family: Comfortaa, cursive;
+}
+
+body {
+    background-image: url("./canvastexture.jpg");
+    background-size: 100%;
+}
+#main {
+    animation: fade-in-top 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+/* #inspire {
+    transition: 0.25s 0s ease-in-out;
+    font-family: "Share Tech Mono", cursive;
+    font-size: 700%;
+    margin-left: -2%;
+    margin-bottom: -1%;
+    color: DARKORANGE;
+} */
+
+#inspire {
+    display: inline;
+    margin-bottom: -10%;
+    transform: translate(-15%, -40%);
+    width: 20%;
+}
+
+#upload {
+    margin-left: 0.8%;
+    width: 17%;
+    display: block;
+}
+
+#uploadFile {
+    margin-bottom: 0;
+}
+
+.uploadImg button {
+    border: none;
+}
+
+#border {
+    margin-top: -1%;
+    width: 98.5%;
+    height: 99%;
+    border-top: 5px double DARKORANGE;
+    border-bottom: 5px double DARKORANGE;
+
+    animation: fade-in-top 5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.container {
+    transition: 0.25s 0s ease-in-out;
+    display: flex;
+    width: 91%;
+    height: 100%;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    animation: fade-in-top 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    object-fit: cover;
+}
+
+.img {
+    width: 500px;
+    height: 200px;
+    object-fit: cover;
+    align-self: center;
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
+
+.img:hover {
+    transition: all 1s ease-in-out;
+    filter: grayscale(0%);
+    opacity: 1;
+    /* margin: 2%; */
+    border: 2px solid DARKORANGE;
+}
+
+.title {
+    align-self: center;
+    height: auto;
+    font-size: 160%;
+    transform: rotate(90deg);
+    margin: -30%;
+    width: 200px;
+    font-variant: all-petite-caps;
+    font-weight: bold;
+}
+
+.title:hover {
+    transition: all 0.2s ease-in-out;
+    /* background-color: rgb(255, 255, 255, 0.5); */
+    color: DARKORANGE;
+    font-weight: bold;
+}
+
+.imgTitle {
+    display: flex;
+    width: 48%;
+    justify-content: space-evenly;
+}
+
+#pop-up {
+    margin: 0;
+    *//* padding: 0; */
+        width: 100%;
+    /* height: 100%; */
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255, 0.7);
+    animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+#popup-img-info {
+    margin: 0;
+    display: flex;
+    align-self: center;
+    align-content: stretch;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+#popupimg img {
+    width: 52%;
+    object-fit: scale-down;
+}
+
+#showcomments {
+    width: 80%;
+    text-align: right;
+}
+#close {
+    font-weight: bold;
+    color: DARKORANGE;
+    margin-left: 50%;
+    padding-left: 0.5%;
+    font-size: 160%;
+}
+
+#close:hover {
+    transition: all 1s ease-in-out;
+    background: DARKORANGE;
+    color: white;
+}
+
+.commentsContainers {
+    height: 75%;
+    overflow: auto;
+}
+
+.uploadGetComments {
+    border-top: 5px solid DARKORANGE;
+    padding-top: 3%;
+}
+
+b,
+label {
+    font-variant: all-petite-caps;
+    color: DARKORANGE;
+}
+
+input {
+    border: none;
+    width: 80%;
+}
+
+button {
+    margin: 0;
+    font-variant: all-petite-caps;
+    border: none;
+    background-color: inherit;
+    color: DARKORANGE;
+    text-align: center;
+    width: 100%;
+}
+
+button:hover {
+    transition: all 1s ease-in-out;
+    background: DARKORANGE;
+    color: white;
+    border: 1px solid DARKORANGE;
+}
+
+/* ///////////////////////KEY FRAMES /////////// */
+
+@keyframes fade-in-top {
+    0% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

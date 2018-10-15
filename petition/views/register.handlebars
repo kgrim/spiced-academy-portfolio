@@ -1,0 +1,28 @@
+<h4 id="welcomeTitle">Welcome!</h4>
+<h6 id="petitionDesc">Are you interested in having a fancy dinner with your beloved hamster? If this is your thing I recommend visiting one of the restaurants before this petition closes them down...
+</br>
+</br>Else just sign the petition to save another chef's life!</h6>
+
+<label id="registerLabel">Register</label>
+<div class="register">
+
+<img src="\czako_zagat16.jpg" alt="http://www.czako.com/mike_czako_%7C_Google_%7C_Zagat_%7C_Tiny_Cafe.html">
+
+<div class="inputFieldHome">
+    <!-- <label>If you wish to support this cause, please register here: </label> -->
+    <form method = "POST" action = '/register'>
+            <input name = 'name' placeholder = 'name' autocomplete="off">
+            <input name = 'surname' placeholder = 'surname' autocomplete="off">
+            <input name = 'email' placeholder = 'email' autocomplete="off">
+            <input name = 'password' placeholder = 'password' type="password" autocomplete="off">
+            <button type = 'submit'>Support the Cause!</button>
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+          </form>
+
+    </div>
+</div>
+
+<div class="loginLink">
+    <h4>However... if you do have an account:</h4>
+</div>
+<a href="/login" id="loginClick">Click Here</a>
