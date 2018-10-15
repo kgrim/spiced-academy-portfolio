@@ -1,0 +1,478 @@
+@import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono");
+* {
+  font-family: "Share Tech Mono", monospace;
+  color: #66cc1a;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background: #112 url(//images.weserv.nl/?url=i.imgur.com/6QJjYMe.jpg) center
+    no-repeat;
+
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  background-size: cover;
+  margin: 0;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  margin: 0;
+  height: 100vh;
+}
+
+.rain {
+  height: 100%;
+  background: url(rain.png);
+  animation: rain 0.3s linear infinite;
+}
+
+.rain:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: white;
+  animation: lighting 6s cubic-bezier(0, 2.57, 1, -2.82) infinite 10s;
+  opacity: 0;
+}
+
+@keyframes rain {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 20% 100%;
+  }
+}
+
+@keyframes lighting {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  11% {
+    opacity: 0;
+  }
+  14% {
+    opacity: 1;
+  }
+  14.25% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  21% {
+    opacity: 1;
+  }
+  21.25% {
+    opacity: 0;
+  }
+  104% {
+    opacity: 0;
+  }
+}
+
+.welcomeIntro {
+  padding: 10%;
+}
+
+.register,
+.login {
+  animation: flicker-img 4s linear both -1s;
+}
+
+.register > h3,
+.login > h3 {
+  font-size: 20px;
+  padding-left: 10%;
+}
+
+.register > button,
+.login > button {
+  margin-bottom: 5%;
+}
+a.link {
+  font-size: 20px;
+  padding-left: 10%;
+  padding-top: 5%;
+}
+input {
+  color: #66cc1a;
+  border: 2px solid;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 25px;
+  width: 13em;
+  padding: 1% 5%;
+  font-weight: 600;
+  margin: 0 auto;
+  background: RGB(102, 204, 26, 0.1);
+  box-shadow: 0 0 0px 3px RGB(102, 204, 26, 0.2);
+  opacity: 1;
+}
+
+button {
+  position: relative;
+  color: #66cc1a;
+  border: 2px solid;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  width: 13em;
+  padding: 1% 5%;
+  font-weight: 600;
+  margin: 0 auto;
+  background: RGB(102, 204, 26, 0.2);
+  box-shadow: 0 0 0px 3px RGB(102, 204, 26, 0.2);
+  opacity: 0.4;
+}
+button:hover {
+  color: #66cc1a;
+  opacity: 1;
+  animation: flicker-img 4s linear infinite both;
+}
+
+img:hover {
+  animation: flicker-img 4s linear infinite both;
+}
+
+nav {
+  width: 5%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  background-color: rgb(0, 0, 0, 0.7);
+}
+.logoFrenemy {
+  position: fixed;
+  right: 0;
+  font-size: 300%;
+  letter-spacing: 6px;
+  word-spacing: 6px;
+  text-align: right;
+  color: #282b26;
+  text-shadow: 0 0 0px #71af44, 0 0 3px #d0fdaf, 0 0 0px #71af44,
+    0 0 0px #66cc1a, 0 0 0px #66cc1a, 0 0 17px #66cc1a, 0 0 55px #66cc1a,
+    0 0 15px #66cc1a;
+  animation: flicker-img 4s linear infinite both;
+}
+.bigLogo {
+  font-size: 600%;
+}
+
+.otherLinks {
+  font-size: 150%;
+  position: fixed;
+  top: 25%;
+  display: block;
+  right: 3%;
+  text-align: right;
+}
+
+#onlineAlliances {
+  margin-bottom: 10px;
+}
+
+textarea {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #66cc1a;
+  width: 40%;
+  border-color: #66cc1a66;
+  font-size: 100%;
+}
+
+.profilepic {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+  border-radius: 10% 50%;
+  position: fixed;
+  top: 10%;
+  right: 2.5%;
+}
+
+.profilepic:hover {
+  animation: flicker-img 4s linear infinite both -1s;
+}
+
+.bigProfilePic {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10% 50%;
+  border: 4px solid black;
+}
+
+.bigProfilePic:hover {
+  animation: flicker-img 4s linear infinite both -1s;
+}
+
+@keyframes flicker-img {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  31.98% {
+    opacity: 1;
+  }
+  32% {
+    opacity: 0;
+  }
+  32.8% {
+    opacity: 0;
+  }
+  32.82% {
+    opacity: 1;
+  }
+  34.98% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  35.7% {
+    opacity: 0;
+  }
+  35.72% {
+    opacity: 1;
+  }
+  36.98% {
+    opacity: 1;
+  }
+  37% {
+    opacity: 0;
+  }
+  37.6% {
+    opacity: 0;
+  }
+  37.62% {
+    opacity: 1;
+  }
+  67.98% {
+    opacity: 1;
+  }
+  68% {
+    opacity: 0;
+  }
+  68.4% {
+    opacity: 0;
+  }
+  68.42% {
+    opacity: 1;
+  }
+  95.98% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 0;
+  }
+  96.7% {
+    opacity: 0;
+  }
+  96.72% {
+    opacity: 1;
+  }
+  98.98% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  99.6% {
+    opacity: 0;
+  }
+  99.62% {
+    opacity: 1;
+  }
+}
+
+.profile,
+.otherProfile {
+  padding-top: 5%;
+  display: flex;
+  color: #66cc1a;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.greeting {
+  width: 100%;
+  font-size: 300%;
+}
+
+.bio {
+  width: 90%;
+  font-size: 170%;
+  padding-left: 5%;
+  margin-top: 0;
+}
+
+.links {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+}
+.popup {
+  background-color: rgb(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 15;
+  height: 100%;
+  width: 100%;
+}
+.module {
+  font-size: 25px;
+  background-color: rgb(0, 0, 0, 0.9);
+  width: 100%;
+  height: 40%;
+  position: fixed;
+  z-index: 20;
+  top: 30%;
+}
+
+.module input {
+  margin-top: 5%;
+}
+
+.close:hover {
+  width: 0%;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
+    0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+}
+
+.friendsRoute {
+  padding-top: 5%;
+}
+
+.friendsRoute h3 {
+  font-size: 30px;
+}
+.friendsRoute div {
+  display: flex;
+  padding-top: 3%;
+}
+
+.friendsDiv,
+.wannabeDiv {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.friendsImg {
+  height: 200px;
+  width: 200px;
+  border-radius: 10% 50%;
+  object-fit: cover;
+}
+.wannabeImg {
+  height: 150px;
+  width: 150px;
+  border-radius: 50% 10%;
+  object-fit: cover;
+}
+
+.friendsDiv h4,
+.wannabeDiv h4 {
+  font-size: 20px;
+  flex-grow: 1;
+  padding: 2%;
+}
+
+.textButtonFriends {
+  width: 20%;
+  display: flex;
+
+  align-self: flex-end;
+  /* flex-direction: column; */
+}
+.textButtonWannabes {
+  width: 20%;
+  display: flex;
+  margin: -15px;
+  align-self: flex-end;
+}
+
+.textButtonWannabes button {
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.textButtonFriends button {
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.onlineImg {
+  margin-top: 5%;
+  height: 70px;
+  width: 70px;
+  border-radius: 50% 10%;
+  object-fit: cover;
+}
+
+.onlineChatContainer {
+  display: flex;
+}
+
+.onlineContainer {
+  width: 10%;
+  flex-grow: 1;
+}
+
+.chat {
+  margin-top: 5%;
+  flex-grow: 2;
+  width: 50%;
+  height: 700px;
+  overflow: auto;
+}
+
+.message {
+  margin: 1%;
+}
+
+.notification > h3 {
+  position: relative;
+  color: #000;
+  width: 50%;
+  background-color: rgb(102, 204, 26, 0.8);
+}
+
+.otherProfileFriends {
+  width: 100%;
+  margin-top: 3%;
+}
+.otherProfileFriendsWrap {
+  display: flex;
+  width: 50%;
+  margin-top: 2%;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+.error {
+  width: 100%;
+  text-align: center;
+  font-size: 150%;
+}
