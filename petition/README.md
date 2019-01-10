@@ -22,4 +22,4 @@ Pastel/translucent colours were used as they mirroring the society's perception 
 Most of the text is rotated sideways to represent the impracticality of the subject.
 On each page all of the information is mostly layered and gathered together to focus on the fact that the content is rather small.
 
-![Screenshot1](petition/screenshots/extrainfo.png)
+![Screenshot1](screenshots/extrainfo.png)
