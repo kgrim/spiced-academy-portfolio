@@ -1,4 +1,4 @@
-Final Project (Fighting Game):
+[Final Project (Fighting Game):](http://super-spiced-brothers.herokuapp.com/):
 Completion time: 1 week
 
     Tech: Phaser & Sockets.io
