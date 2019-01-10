@@ -1,5 +1,5 @@
 # Hello!
-###Welcome to my portfolio.
+### Welcome to my portfolio.
 In this repository you will find a selection of the work that has been generated for the past 3 months.
 There will be 4 main folders;
 
