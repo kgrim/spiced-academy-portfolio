@@ -8,7 +8,6 @@
 
 
 **Main Focus:**
-
 as this was the first full-stack project, there was a lot to learn.
 There is a log-in/sign-up function in which the password is hashed and it would save the log-in in a cookie session.
 Once the user sign-up, they would be directed to the edit profile, where couple of personal questions are asked (this
@@ -19,7 +18,6 @@ The petitioners page can also be filtered by clicking on the city or access the 
 
 
 **Design:**
-
 my petition was about the food trend of 'Tiny Plates'.
 This is very much reflected on the website.
 Pastel/translucent colours were used as they mirroring the society's perception of cuteness/dreamy and this is also reflected on the text styling, where the font is rather small.

@@ -8,7 +8,6 @@
 
 
 **Main Focus:**
-
 there is a log-in/sign-up function in which the password is hashed and it would save the log-in in a cookie session.
 Once the user sign-up, they would be directed to their profile where they can add an image and edit the bio.
 Once the user log-in a notice is emitted to the other online users using sockets.io.
@@ -19,7 +18,6 @@ If you are clicking on some other user image, it will direct you to their profil
 
 
 **Design:**
-
 as this is the social network for the villains, the pop colour must be poison green!
 The whole ecstatic is dark/mysterious and the background is on a brick wall, very similar to that found in alleyways as these are the parts most villains meet up.
 There are noticeable visual/sound features.
