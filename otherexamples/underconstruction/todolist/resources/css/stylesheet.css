@@ -75,14 +75,12 @@ header button .fill:hover {
 
 #ulContainer {
     width: 100vw;
-    height: 100vh;
+    height: 70%;
     display: flex;
     flex-wrap: wrap;
     position: absolute;
     top: 150px;
-    /* float: left; */
-    paddding: 15px;
-    /* background-color: rgba(255, 255, 255, 0.5); */
+    padding-bottom: 5px;
 }
 
 #ulContainer img {
@@ -106,7 +104,8 @@ header button .fill:hover {
 
 #toDo  {
     /* width: 100vw; */
-    /* align-self: center; */
+    /* justify-content: flex-start; */
+    padding-left: 47px;
 }
 
 li {

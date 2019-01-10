@@ -71,12 +71,14 @@ function completelyRemoveItem(listItem) {
 
 function addItemToDoneList(doneItem) {
     console.log('doneItem ::' + doneItem);
-    var str = `<li class="listItem">${doneItem.text()}</li>`;
+    var str = `<li class="listItem">${doneItem.text()} ${removeIcon}</li>`;
     doneList.append(str);
-    alert('wohooo!');
-}
+    $('.remove').one('click', function(e) {
+        e.stopPropagation();
+        e.preventDefault();
 
-
-function addItemToRemoveList() {
-
+        console.log('REMOVE');
+        var parentOfHighlightedItem = $(e.target).parent();
+        completelyRemoveItem(parentOfHighlightedItem);
+    });
 }
