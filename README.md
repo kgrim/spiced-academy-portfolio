@@ -4,36 +4,36 @@ In this repository you will find a selection of the work that has been generated
 There will be 4 main folders;
 
 #### [Final Project (Fighting Game):](http://super-spiced-brothers.herokuapp.com/)
-**Completion time:**
+##### Completion time:
 1 week
-**Tech:**
+##### Tech:
 Phaser & Sockets.io
-**Functions:**
+##### Functions:
 Multi-player from different devices, instant response
 
 #### Social Network Project:
-**Completion time:**
+##### Completion time:
 2 weeks
-**Tech:**
+##### Tech:
 React, Redux, Sockets & Aws3
-**Functions:**
+##### Functions:
 log-in/sign-up, profile edit, image uploader, online/chat function, friend button, notification
 feature
 
 #### Imageboard Project:
-**Completion time:**
+##### Completion time:
 1 week
-**Tech:**
+##### Tech:
 Vue & Aws3
-**Functions:**
+##### Functions:
 instant image uploader function, instant comment function
 
 #### [Petition Project:](https://spiced-sesame.herokuapp.com)
-**Completion time:**
+##### Completion time:
 2 weeks
-**Tech:**
+##### Tech:
 Handlebars & PSQL
-**Functions:**
+##### Functions:
 log-in/sign-up, profile edit, signature recorder
 
 Every folder will have further information (README.md) regarding the project and screenshots of the website can be found in the screenshot folder.
