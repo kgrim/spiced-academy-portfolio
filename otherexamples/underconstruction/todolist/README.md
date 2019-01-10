@@ -1,7 +1,7 @@
 To Do List:
 Completion time: less than a day
 
-    Tech: HTML, CSS, Javascript & jQuery
+    Tech: jQuery
 
     Main Focus:
     Wanted to create a fun to do list where one can add an entry by hitting the enter or by clicking on the button. Items can be completed by clicking on the 'tick' button and removed by clicking on the 'minus' button.

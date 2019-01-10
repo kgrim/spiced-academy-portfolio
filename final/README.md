@@ -7,7 +7,8 @@ Completion time: 1 week
     Functions: Multi-player from different devices, instant response.
 
     Aim of the Game (no pun intended):
-    this is an up to 4 player fighting game where the players have kick each other off the screen while keeping their lives.
+    this is an up to 4 player fighting game where the players have kick each other off the screen while keeping their
+    lives.
     Each player has 8 lives and they will not respawn once they are up however can enjoy the rest of the gameplay.
     The user must hit the 'A' button for a punch and 'D' button for a kick.
     Every player has a double jump by hitting the 'UP' button twice.

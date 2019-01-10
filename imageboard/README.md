@@ -1,4 +1,5 @@
 Imageboard Project:
+
 Completion time: 1 week
 
      Tech: Vue & Aws3
@@ -14,7 +15,8 @@ Completion time: 1 week
      Design:
      very minimal, 2 hues approach has been chosen for this project.
      The background image is a canvas effect with paint slabs to give it some texture yet not distracting from the images.
-     Hints Tangerine colour was chosen as this will spark your imagination and also provides you with energy gives the user a sense of inspiration.
+     Hints Tangerine colour was chosen as this will spark your imagination and also provides you with energy gives the
+     user a sense of inspiration.
      All of the images are uniform and grayscale to give it a sense of cleanliness.
      The images then turn to their original colour and an orange boarder is displayed on the hovered item.
      Note that the titles also change to the Tangerine colour once it is hovered on to give the user readability.

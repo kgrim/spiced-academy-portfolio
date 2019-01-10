@@ -1,4 +1,5 @@
 [Snippet Code Examples:](https://codepen.io/kgrim/)
+
 Completion time: average of 4 hours
 
     Tech: Various
