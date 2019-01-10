@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+* {
+ font-family: 'Roboto', sans-serif;
+ margin: 0;
+}
+
+body {
+    padding: 8px 0 0 0;
+    background-image: url(../../icons/bananaprint.png);
+    background-size: 80px;
+
+}
+
+header {
+    width: 99%;
+    height: 12px;
+    position: fixed;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    /* background: rgba(255, 255, 255, 0.5); */
+    border-bottom-right-radius: 10px;
+}
+
+header input {
+    width: 58%;
+    height: 106px;
+    float: left;
+    font-size: 58px;
+    font-weight: 400;
+    text-indent: 25px;
+    padding: 0 60px 0 0;
+    background: #ffffffde;
+    border-radius: 25px 0px 0px 25px;
+    border: 0px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+
+header button {
+    width: 106px;
+    height: 106px;
+    position: relative;
+    right: 57px;
+    z-index: 2;
+    border-radius: 0px 25px 25px 0px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    box-shadow: 0px 2px 4px rgba(114, 114, 114, 0.11);
+}
+
+header button svg {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -8px 0 0 -8px;
+}
+
+
+header button .fill {
+    fill: #f2ac15de;;
+}
+
+header button .fill:hover {
+    fill: #fff;
+}
+
+#ulContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 150px;
+    /* float: left; */
+    paddding: 15px;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+}
+
+#ulContainer img {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background: #f2ac15de;
+    padding: 4px;
+    border-radius: 4px;
+    margin-left: 7px;
+    margin-right: -5px;
+}
+
+.titleList {
+    width: 100vw;
+    color: #302c18;
+    font-size: 49px;
+    text-align: center;
+    text-shadow: -3px 3px 0px #f5f5f4;
+}
+
+#toDo  {
+    /* width: 100vw; */
+    /* align-self: center; */
+}
+
+#toDo li {
+    width: 100%;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    padding-right: 0px;
+    margin: 5px;
+    margin-right: 0px;
+}
