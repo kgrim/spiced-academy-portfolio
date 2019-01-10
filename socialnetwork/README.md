@@ -1,13 +1,13 @@
 ## Social Network Project:
 
-Completion time: 2 weeks
+**Completion time:** 2 weeks
 
-Tech: React, Redux, Sockets & Aws3
+**Tech:** React, Redux, Sockets & Aws3
 
-Functions:
+**Functions:**
 log-in/sign-up, profile edit, image uploader, online/chat function, friend button, notification feature.
 
-Main Focus:
+**Main Focus:**
 there is a log-in/sign-up function in which the password is hashed and it would save the log-in in a cookie session.
 Once the user sign-up, they would be directed to their profile where they can add an image and edit the bio.
 Once the user log-in a notice is emitted to the other online users using sockets.io.
@@ -17,7 +17,7 @@ All the images have a click event. If you are clicking on your image, a pop-up m
 If you are clicking on some other user image, it will direct you to their profile.
 
 
-Design:
+**Design:**
 as this is the social network for the villains, the pop colour must be poison green!
 The whole ecstatic is dark/mysterious and the background is on a brick wall, very similar to that found in alleyways as these are the parts most villains meet up.
 There are noticeable visual/sound features.
