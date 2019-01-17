@@ -1,5 +1,4 @@
-
-Snippet Code Examples:
+## Weather App:
 
 **Completion time:** 5 hours  
 
