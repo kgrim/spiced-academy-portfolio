@@ -12,8 +12,4 @@ Went the cafe' vibe to make it a bit more playful and the text in a cursive font
 
 Check out the project live here; [Codepen](https://codepen.io/kgrim/pen/LMoLbY?editors=0100)
 
-![Screenshot](screenshots/screenshot1.png)
-
-![Screenshot](screenshots/screenshot2.png)
-
 ![Screenshot](screenshots/screenshot3.png)
