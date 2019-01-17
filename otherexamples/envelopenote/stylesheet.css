@@ -1,0 +1,157 @@
+body {
+  background-image: url("https://images.pexels.com/photos/1449082/pexels-photo-1449082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/* ///////////////////// container div where it holds the whole envelope together ///////////////////// */
+.envelopeContainer {
+  width: 800px;
+  height: 400px;
+  box-shadow: 1px 1px 10px 2px grey;
+  margin: 300px auto;
+  background: rgb(213,213,213);
+  background: linear-gradient(138deg, rgba(223,223,223,1) 0%,
+  rgba(252,252,252,1) 35%,
+  rgba(250,250,250,1) 52%, rgba(113,113,113,1) 100%);
+}
+
+.containerBeforeClick {
+  animation: heartbeat 3s ease-in-out infinite both;
+  transform: scale(.35);
+  background: white;
+}
+
+/* ///////////////////// Envelope Flap ///////////////////// */
+.evelopeFlap {
+  width: 0;
+  height: 0;
+  position: relative;
+  top: -1052px;
+  z-index: 7;
+  border-left: 400px solid transparent;
+  border-right: 400px solid transparent;
+  border-top: 250px solid white;
+  border-radius: 6px;
+}
+.evelopeFlapShadow{
+  width: 0;
+  height: 0;
+  position: relative;
+  top: -800px;
+  z-index: 6;
+  border-left: 400px solid transparent;
+  border-right: 402px solid transparent;
+  border-top: 252px solid rgba(0,0,0,0.2);
+  border-radius: 6px;
+}
+
+.evelopeFlapClick {
+  animation: openEnvelopeFlap 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* ///////////////////// Main body of the Envelope ///////////////////// */
+.rightSideEnvelope {
+  width: 0;
+  height: 0;
+  position: relative;
+  left: 400px;
+  z-index: 5;
+  border-top: 200px solid transparent;
+  border-bottom: 200px solid white;
+  border-right: 400px solid white;
+  border-radius: 6px 0px;
+}
+
+.leftSideEnvelope {
+  width: 0;
+  height: 0;
+  position: relative;
+  top: -400px;
+  z-index: 5;
+  border-top: 200px solid transparent;
+  border-bottom: 200px solid white;
+  border-left: 400px solid white;
+  border-radius: 0px 6px;
+}
+
+
+/* ///////////////////// Paper Section ///////////////////// */
+.paper {
+  width: 750px;
+  height: 385px;
+  position: relative;
+  top: -1290px;
+  left: 24px;
+  z-index: 1;
+  background-image: url(https://marketplace.canva.com/MAB1Byi0908/1/thumbnail_large/canva-paper-texture-MAB1Byi0908.jpg);
+  background-size: 750px;
+
+}
+
+.paperClick {
+  animation: slidePaper 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s both;
+}
+
+textarea {
+  background: transparent;
+  border: none;
+  font-family: 'Kristi', cursive;
+  font-size: 2.2rem;
+  outline: 0px;
+}
+
+textarea:active {
+  outline:0px
+}
+
+/* ///////////////////// Keyframes animations without webkit ///////////////////// */
+
+/* Keyframe used in '.containerBeforeClick' to notify the user to click the envelopeContainer */
+@keyframes heartbeat {
+    from {
+        transform: scale(.35);
+        transform-origin: center center;
+        nimation-timing-function: ease-out;
+    }
+    5% {
+        transform: scale(0.335);
+        animation-timing-function: ease-in;
+    }
+    10% {
+        transform: scale(0.34);
+        animation-timing-function: ease-out;
+    }
+    15% {
+        transform: scale(0.32);
+        animation-timing-function: ease-in;
+    }
+    20% {
+        transform: scale(.35);
+        animation-timing-function: ease-out;
+    }
+}
+
+
+/* Keyframe used in '.evelopeFlapClick' to open the envelope */
+@keyframes openEnvelopeFlap {
+    0% {
+        transform: rotateX(0);
+        transform-origin: top;
+    }
+    100% {
+        transform: rotateX(180deg);
+        transform-origin: top;
+    }
+}
+
+
+/* Keyframe used in '.paperClick' to slide the paper up */
+@keyframes slidePaper {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-240px);
+  }
+}
