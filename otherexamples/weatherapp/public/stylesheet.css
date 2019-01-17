@@ -1,0 +1,100 @@
+* {
+    text-align: center;
+    font-family: Roboto, monospace;
+}
+
+#root {
+    height: 600px;
+    width: 600px;
+    background-image: url("https://media3.giphy.com/media/dI3D3BWfDub0Q/giphy.gif?cid=3640f6095c3f9330563270514d39977a");
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin: 0px;
+    margin-left: 50px;
+}
+
+.mainTitle {
+    position: absolute;
+    position: absolute;
+    font-family: 'Bungee Shade', cursive;
+}
+
+h1.mainTitle {
+    color: white;
+    text-shadow: 2px 2px 0 darkgoldenrod, 2px -2px 0 darkgoldenrod, -2px 2px 0 darkgoldenrod, -2px -2px 0 darkgoldenrod, 2px 0px 0 darkgoldenrod, 0px 2px 0 darkgoldenrod, -2px 0px 0 darkgoldenrod, 0px -2px 0 darkgoldenrod;
+    background: transparent;
+    letter-spacing: 5px;
+}
+
+h2.mainTitle {
+    color: darkgoldenrod;
+    top: 68px;
+    left: 41px;
+    font-family: monospace;
+}
+
+
+
+button {
+    width: 52px;
+    height: 52px;
+    border: 2px double white;
+    border-radius: 50%;
+    font-size: 9px;
+    background: transparent;
+    /* background: linear-gradient(70deg, darkgoldenrod, gold, darkgoldenrod); */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    left: -108px;
+    top: 40px;
+}
+
+button:hover {
+    border: none;
+}
+
+input {
+    position: absolute;
+    top: 90px;
+    left: 114px;
+    border: none;
+    border-left: 2px solid darkgoldenrod;
+    border-bottom: 2px solid darkgoldenrod;
+    box-shadow: -2px 2px 0px 0px #cc9c25;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+#weatherSection {
+    color: white;
+    text-shadow: 1px 1px 2px #88888861, 1px -1px 2px #88888861, -1px 1px 2px #88888861, -1px -1px 2px #88888861, 1px 0px 2px #88888861, 0px 1px 2px #88888861, -1px 0px 2px #88888861, 0px -1px 2px #8282829c;
+    margin: 0px;
+}
+
+#condotionSection {
+    font-size: 30px;
+}
+
+#tempSection {
+    font-size: 35px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#feelsLikeSection {
+    font-size: 13px;
+}
+
+#locationSection {
+    color: white;
+    text-shadow: 1px 1px 2px #8282829c, 1px -1px 2px #8282829c, -1px 1px 2px #8282829c, -1px -1px 2px #8282829c, 1px 0px 2px #8282829c, 0px 1px 2px #8282829c, -1px 0px 2px #8282829c, 0px -1px 2px #8282829c;
+}
+
+#timeDate {
+    font-size: 10px;
+}
+
+#error {
+    padding-top: 10%;
+}
