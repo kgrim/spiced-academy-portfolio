@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    background: honeydew;
+}
+
+.hexagonContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* CREATING HEXAGONS */
+.hexagon {
+    margin: 1px;
+    position: relative;
+    width: 150px;
+    height: 86.60px;
+    background: linear-gradient(0.25turn, #d0d0d0, #f7f7f7, white, #c4c4c4, #777777);
+    margin: 43.30px 0;
+    box-shadow: -5px 5px 18px 0px rgba(76,76,76,0.4);
+    border-right: 1px solid #bfbfbf;
+}
+
+.hexagon:before,
+.hexagon:after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 106.07px;
+    height: 106.07px;
+    -webkit-transform: scaleY(0.5774) rotate(-45deg);
+    -ms-transform: scaleY(0.5774) rotate(-45deg);
+    transform: scaleY(0.5774) rotate(-45deg);
+    background-color: inherit;
+    left: 21.9670px;
+    box-shadow: -5px 5px 18px 0px rgba(76,76,76,0.4);
+}
+
+.hexagon:before {
+    top: -53.0330px;
+    background: linear-gradient(0.38turn, #d0d0d0, #f7f7f7, white, #c4c4c4, #777777);
+}
+
+.hexagon:after {
+    bottom: -53.0330px;
+    background: linear-gradient(0.65turn, #ffd400, #a36a00);
+}
+
+/*cover up extra shadows*/
+.hexagon span {
+    display: block;
+    position: absolute;
+    top:0px;
+    left: 0;
+    width:150px;
+    height:86.6025px;
+    z-index: 0;
+    background: inherit;
+}
+
+
+/* CREATING ALT HEXAGONS */
+
+.hexagonAlt {
+    padding: 1px;
+    position: relative;
+    z-index: 0;
+    top: -70px;
+    left: -25px;
+    width: 150px;
+    height: 86.60px;
+    background: linear-gradient(0.25turn, #c0c0c0, #e9e9e9, white, #f1f1f1, #c6c6c6);
+    margin: 43.30px 0;
+    box-shadow: -5px 5px 18px 0px rgba(76,76,76,0.55);
+}
+
+.hexagonAlt:before,
+.hexagonAlt:after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 106.07px;
+    height: 106.07px;
+    -webkit-transform: scaleY(0.5774) rotate(-45deg);
+    -ms-transform: scaleY(0.5774) rotate(-45deg);
+    transform: scaleY(0.5774) rotate(-45deg);
+    background-color: inherit;
+    left: 21.9670px;
+    box-shadow: -5px 5px 18px 0px rgba(76,76,76,0.55);
+}
+
+.hexagonAlt:before {
+    top: -53.0330px;
+    background: linear-gradient(0.38turn, #c0c0c0, #e9e9e9, white, #f1f1f1, #c6c6c6);
+}
+
+.hexagonAlt:after {
+    bottom: -53.0330px;
+    background: linear-gradient(0.65turn, #9bd80e, #4e5f0b);
+}
+
+/*cover up extra shadows*/
+.hexagonAlt span {
+    display: block;
+    position: absolute;
+    top:0px;
+    width:150px;
+    height:86.6025px;
+    z-index: 0;
+    background: inherit;
+}

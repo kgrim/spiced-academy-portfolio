@@ -60,7 +60,6 @@ class App extends React.Component {
     render() {
         return (
             <div>
-
                 <Form getWeather={this.getWeather}/>
 
                 <Weather condition={this.state.condition}
@@ -70,7 +69,6 @@ class App extends React.Component {
                 feelsLikeC={this.state.feelsLikeC}
                 feelsLikeF={this.state.feelsLikeF}
                 uv={this.state.uv}
-                error={this.state.error}
                 city={this.state.city}
                 country={this.state.country}
                 localDateTime={this.state.localDateTime}
