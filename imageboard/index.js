@@ -67,7 +67,6 @@ app.post("/upload", uploader.single("file"), upload, (req, res) => {
             req.body.username
         )
             .then(({ rows }) => {
-                console.log("ROWSSSSS: ", { rows });
                 res.json({
                     image: rows[0]
                 });
@@ -100,7 +99,6 @@ app.get("/comments/:id", (req, res) => {
 });
 
 app.post("/uploadComments/:id", (req, res) => {
-    // console.log("IDDDDDDD: ", req.body);
     saveComment(req.params.id, req.body.comment, req.body.username)
         .then(result => {
             console.log("ROWSSSSS 2: ", result.rows);

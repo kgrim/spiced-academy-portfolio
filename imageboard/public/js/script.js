@@ -38,7 +38,6 @@
         mounted: function() {
             let self = this;
             axios.get("/image/" + this.id).then(function(res) {
-                console.log("HEllo");
                 if (!res.data) {
                     self.close();
                 } else {
@@ -72,10 +71,8 @@
             axios
                 .get("/comments/" + self.id)
                 .then(function(res) {
-                    // console.log("Comments data ", res.data);
 
                     self.dialouge = res.data;
-                    // console.log("self: ", self);
                 })
                 .catch(function(err) {
                     console.log(err);
@@ -87,10 +84,7 @@
                 axios
                     .get("/comments/" + self.id)
                     .then(function(res) {
-                        // console.log("Comments data ", res.data);
-
                         self.dialouge = res.data;
-                        // console.log("self: ", self);
                     })
                     .catch(function(err) {
                         console.log(err);
@@ -121,8 +115,6 @@
                 axios
                     .get("/comments/" + self.id)
                     .then(function(res) {
-                        // console.log("Comments data ", res.data);
-
                         self.dialouge = res.data;
                         console.log("self: ", self);
                     })
@@ -198,11 +190,8 @@
                 location.hash = "";
             },
             showImage: function(imageSerialId) {
-                // console.log("yoooo im in showImage function: ", imageSerialId);
-                // console.log("this.images: ", this.images);
                 this.id = imageSerialId;
                 location.hash = imageSerialId;
-                // console.log(location.hash);
             },
             showMore: function() {
                 var lastId = this.images[this.images.length - 1].id;
@@ -221,11 +210,7 @@
                         console.log("this.more: false", app.more);
                     } else {
                         app.more = true;
-                        console.log("this.more: true", app.more);
 
-                        // for (var i = 0; i < result.data.length; i++) {
-                        //     app.images.push(result.data[i]);
-                        // }
                     }
                 });
             }

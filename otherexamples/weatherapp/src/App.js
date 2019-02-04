@@ -2,8 +2,9 @@ import React from "react";
 
 import Form from "./components/Form";
 import Weather from "./components/Weather";
+import secrets from "./secrets"
 
-const apiKey = "3c0082f27441477b879131530191601";
+const apiKey = secrets.apiKey;
 
 
 
