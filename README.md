@@ -27,6 +27,6 @@ feature
 Every folder will have further information (README.md) regarding the project and screenshots of the website can be found in the screenshot folder.
 
 Thank you for your time,
-### [Kyrsten](https://kgrim.github.io/kyrstengrima)
+### [Kyrsten](https://kyrstengrima.herokuapp.com)
 
 P.S the highlighted text will take you to the live version of the project.
