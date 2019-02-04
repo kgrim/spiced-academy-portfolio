@@ -8,7 +8,7 @@ There will be 4 main folders;
 **Tech:** Phaser & Sockets.io  
 **Functions:** Multi-player from different devices, instant response
 
-### Social Network Project:
+### [Social Network Project:](https://frenemy.herokuapp.com)
 **Completion time:** 2 weeks  
 **Tech:** React, Redux, Sockets & Aws3  
 **Functions:** log-in/sign-up, profile edit, image uploader, online/chat function, friend button, notification
