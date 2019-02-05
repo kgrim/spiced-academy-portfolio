@@ -127,8 +127,6 @@
 
         //SOCKET LISTENERS
         this.socket.on("currentPlayers", function(players) {
-            // console.log("THIS player SOCKET", self.socket.id);
-            console.log("SOCKET TO WHICH PLAYER", players);
             mainPlayerId = self.socket.id;
             Object.keys(players).forEach(function(id) {
                 setTimeout(function() {
@@ -164,9 +162,7 @@
             players.getChildren().forEach(function(p) {
                 if (playerInfo.socketId == p.data.list.socketId) {
                     var count = "";
-                    // console.log("PLAYER FROM SOCKET -->", playerInfo);
                     if (playerInfo.playerNo == 1) {
-                        // console.log("do nothing");
                     } else if (playerInfo.playerNo == 2) {
                         count = 2;
                     } else if (playerInfo.playerNo == 3) {
@@ -208,9 +204,7 @@
             players.getChildren().forEach(function(p) {
                 if (damagedPlayer.socketId == p.data.list.socketId) {
                     var count = "";
-                    // console.log("PLAYER FROM SOCKET -->", playerInfo);
                     if (damagedPlayer.playerNo == 1) {
-                        // console.log("do nothing");
                     } else if (damagedPlayer.playerNo == 2) {
                         count = 2;
                     } else if (damagedPlayer.playerNo == 3) {
@@ -325,20 +319,15 @@
         });
 
         this.socket.on("userDisconnect", function(disconectedUserId) {
-            console.log("user disconnects!", disconectedUserId);
-            console.log("IMAGE DEAD 1", self.image1dead);
             players.getChildren().forEach(function(p) {
                 if (disconectedUserId == p.data.list.socketId) {
                     if (p.data.list.player == "player1") {
-                        console.log("player1 userDisconnect");
                         scoreTextP1.setText("");
                         this.image1.destroy();
                     } else if (p.data.list.player == "player2") {
-                        console.log("player2 disconnect");
                         scoreTextP2.setText("");
                         this.image2.destroy();
                     } else if (p.data.list.player == "player3") {
-                        // console.log("player3 disconnect");
                         scoreTextP3.setText("");
                         this.image3.destroy();
                     } else if (p.data.list.player == "player4") {
@@ -1680,16 +1669,13 @@
                 player.y < borderLimitTop ||
                 player.y > borderLimitBot
             ) {
-                //if breaks limits, sets player alive status to false
                 player.setData("alive", false);
                 player.setVelocity(0, 10);
                 player.setGravityY(10);
                 player.setPosition(Math.floor(Math.random() * 360) + 150, 100);
-                //show death animation here
-            } //fuq
+            }
             if (player.data.list.player == "player1") {
                 if (!player.data.list.alive) {
-                    console.log("player 1 dies");
                     lives--;
                     player.setData({ alive: true, lives: lives });
                     self.socket.emit("playerDeath", {
@@ -1709,7 +1695,6 @@
                 }
             } else if (player.data.list.player == "player2") {
                 if (!player.data.list.alive) {
-                    console.log("player 2 dies");
                     lives--;
                     player.setData({ alive: true, lives: lives });
                     self.socket.emit("playerDeath", {
@@ -1729,7 +1714,6 @@
                 }
             } else if (player.data.list.player == "player3") {
                 if (!player.data.list.alive) {
-                    console.log("player 3 dies");
                     lives--;
                     player.setData({ alive: true, lives: lives });
                     self.socket.emit("playerDeath", {
@@ -1749,7 +1733,6 @@
                 }
             } else if (player.data.list.player == "player4") {
                 if (!player.data.list.alive) {
-                    console.log("player 4 dies");
                     lives--;
                     player.setData({ alive: true, lives: lives });
                     self.socket.emit("playerDeath", {

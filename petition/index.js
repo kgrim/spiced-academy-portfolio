@@ -44,10 +44,9 @@ app.use((req, res, next) => {
     res.locals.csrfToken = req.csrfToken();
     next();
 });
-// app.disable
+
 
 function checkForLogin(req, res, next) {
-    console.log("checkforLogin");
     if (!req.session.loginId) {
         if (!req.url == "/register" || !req.url == "/login") {
             res.redirect("/register");
@@ -60,7 +59,6 @@ function checkForLogin(req, res, next) {
 }
 
 function checkForSigId(req, res, next) {
-    console.log("checkForSigId");
     if (!req.session.signatureId) {
         res.redirect("/petition");
     } else {
@@ -188,8 +186,6 @@ app.post("/profile", (req, res) => {
 
 ///////////////////////////////petition
 app.get("/petition", (req, res) => {
-    console.log("Inside petition re");
-
     if (req.session.signatureId && req.session.loginId) {
         res.redirect("/thankyou");
     }
@@ -209,7 +205,6 @@ app.post("/petition", (req, res) => {
         insertSignature(req.body.signature, req.session.loginId)
             .then(result => {
                 req.session.signatureId = result.rows[0].id;
-                console.log("req.sess in post petition: ", req.session);
             })
             .then(() => {
                 res.redirect("/thankyou");

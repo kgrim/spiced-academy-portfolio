@@ -70,7 +70,6 @@ io.on("connection", function(socket) {
     socket.on("playerDamaged", function(damagedPlayer) {
         var enemySocketId = damagedPlayer.enemyData.socketId;
         players[enemySocketId].data = damagedPlayer.enemyData;
-        console.log(damagedPlayer);
         io.sockets.emit("damagedPlayer", players[enemySocketId]);
     });
     socket.on("playerDeath", function(player) {
@@ -81,7 +80,6 @@ io.on("connection", function(socket) {
         io.sockets.emit("allPlayers", allPlayers);
     });
     socket.on("gameOver", function(player) {
-        console.log(player);
         io.sockets.emit("gameEnd", player);
     });
 });

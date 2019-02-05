@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 export default class Uploader extends React.Component {
   constructor(props) {
     super(props);
-    console.log("uploader props: ", props);
     this.state = {};
     this.updateImage = this.updateImage.bind(this);
     this.closeUploader = this.closeUploader.bind(this);

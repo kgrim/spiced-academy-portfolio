@@ -49,7 +49,6 @@ class Chat extends React.Component {
 }
 
 const getStateFromRedux = state => {
-  console.log("state.recentMessages:", state.recentMessages);
   return {
     messages: state.recentMessages
   };

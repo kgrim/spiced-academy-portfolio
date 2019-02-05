@@ -39,7 +39,6 @@ export function unfriend(id) {
 }
 
 export function receiveOnlineUsers(data) {
-  console.log("Data inside Actions.js/ receiveOnlineUsers:: ", data);
   return {
     type: "ONLINE_FRIENDS",
     data

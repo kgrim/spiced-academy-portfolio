@@ -103,7 +103,6 @@ module.exports.extractUserInfo = id => {
 };
 
 module.exports.editUsersDb = (name, surname, email, password, id) => {
-    console.log("DB password:", name, surname, email, password);
     return db.query(
         `UPDATE users
         SET name = $1,

@@ -34,7 +34,6 @@ export function getSocket(store) {
     });
 
     socket.on("alert", notification => {
-      console.log("inside sockets, alert ::", notification);
       store.dispatch(alert(notification));
     });
 

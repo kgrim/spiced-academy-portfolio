@@ -99,7 +99,6 @@ app.get("/welcome", (req, res) => {
 app.post("/register", (req, res) => {
   hashPass(req.body.pass)
     .then(hashCode => {
-      // console.log("Row:", hashCode);
       return register(
         req.body.name,
         req.body.surname,
@@ -242,15 +241,11 @@ app.get("/getUser/:userId", (req, res) => {
 app.get("/getFriendshipStatus/:searchId", (req, res) => {
   return checkForFriendStatus(req.session.id, req.params.searchId).then(
     ({ rows }) => {
-      console.log("rows in getFriendshipStatus in server:", rows);
       if (rows.length === 0) {
-        console.log("no rows");
-
         res.json({
           getFriendshipStatus: { status: null }
         });
       } else {
-        console.log("full of rows");
         res.json({
           getFriendshipStatus: rows[0]
         });
@@ -262,11 +257,6 @@ app.get("/getFriendshipStatus/:searchId", (req, res) => {
 /////////////////////////////////////////////////////get friendshipButton
 
 app.post("/friendshipButton/:userId", (req, res) => {
-  console.log(
-    "req.session.id, req.params.userId ::::",
-    req.session.id,
-    req.params.userId
-  );
   return sendFriendRequest(req.session.id, req.params.userId)
     .then(({ rows }) => {
       res.json({ frienshipStatusUpdate: rows[0] });
@@ -367,11 +357,10 @@ server.listen(8080, function() {
 });
 
 ////////////////////////////////////////////////////io connection
-let onlineUsers = {}; // keeps track   of users that are online
+let onlineUsers = {};
 
 io.on("connection", function(socket) {
   console.log(`socket with id ${socket.id} has connected`);
-  //all the server side socket code will be within this function
   if (!socket.request.session || !socket.request.session.id) {
     return socket.disconnect(true);
   }

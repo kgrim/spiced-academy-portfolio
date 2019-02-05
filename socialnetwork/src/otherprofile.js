@@ -30,7 +30,6 @@ export default class OtherProfile extends React.Component {
   }
   fetchData(userId) {
     axios.get(`/getUser/${userId}`).then(resp => {
-      console.log("resp in fetchData", resp.data);
       this.setState(resp.data);
     });
   }
@@ -38,7 +37,6 @@ export default class OtherProfile extends React.Component {
     location.replace(`/user/${id}`);
   }
   render() {
-    console.log("this.state", this.state);
     return (
       <div className="otherProfile">
         <FriendshipButton searchId={this.props.match.params.userId} />

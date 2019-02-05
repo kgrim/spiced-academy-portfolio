@@ -26,7 +26,6 @@ class App extends React.Component {
   }
   componentDidMount() {
     axios.get("/user").then(({ data }) => {
-      console.log("app data :: ", data);
       this.setState(data);
     });
   }
@@ -63,7 +62,6 @@ class App extends React.Component {
   notification();
 
   render() {
-    console.log("this.props.notification", this.props.notification);
     if (!this.state.id) {
       return <img src="./loading.gif" />;
     }

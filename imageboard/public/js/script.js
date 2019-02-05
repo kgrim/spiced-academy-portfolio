@@ -19,7 +19,6 @@
             id: function() {
                 let self = this;
                 axios.get("/image/" + this.id).then(function(res) {
-                    console.log("this inside axios", this);
                     if (!res.data.image) {
                         self.close();
                     } else {
@@ -94,12 +93,9 @@
             uploadComment: function(e) {
                 e.preventDefault();
                 let self = this;
-                console.log("self.id ", self.id);
-                console.log("this.comments: ", this.comments);
                 axios
                     .post("/uploadComments/" + self.id, this.comments)
                     .then(function(resp) {
-                        console.log("resp.Data ", resp.data);
                         self.dialouge.unshift(resp.data[0]);
                         self.comments.comment = "";
                         self.comments.username = "";
@@ -113,7 +109,6 @@
                     .get("/comments/" + self.id)
                     .then(function(res) {
                         self.dialouge = res.data;
-                        console.log("self: ", self);
                     })
                     .catch(function(err) {
                         console.log(err);
@@ -144,7 +139,6 @@
             axios
                 .get("/imageboard")
                 .then(function(res) {
-                    console.log("res in Imageboard: ", res.data);
 
                     app.images = res.data.images;
                     app.lastIdDatabase = res.data.lastIdDatabase;
@@ -163,7 +157,6 @@
                 formData.append("description", this.form.description);
                 formData.append("username", this.form.username);
                 axios.post("/upload", formData).then(function(resp) {
-                    console.log("resp.Data ", resp.data);
                     app.images.unshift(resp.data.image);
                     app.images.pop();
                     app.form.title = "";
@@ -191,7 +184,6 @@
                     }
                     if (app.lastIdDatabase === lastIdInResult) {
                         app.more = false;
-                        console.log("this.more: false", app.more);
                     } else {
                         app.more = true;
 

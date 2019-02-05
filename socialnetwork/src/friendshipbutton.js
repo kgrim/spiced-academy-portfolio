@@ -15,17 +15,14 @@ export default class FriendshipButton extends React.Component {
   }
   componentDidMount() {
     axios.get(`/getFriendshipStatus/${this.props.searchId}`).then(resp => {
-      console.log("resp in componentDidMount: ", resp.data);
       this.setState(resp.data.getFriendshipStatus);
       if (!resp.data.getFriendshipStatus.status) {
         this.setState({ buttonText: "Send Alliance Request" });
       }
       if (resp.data.getFriendshipStatus.status) {
-        console.log("There is a status!!!!!");
         this.setState(resp.data.getFriendshipStatus);
 
         if (this.state.status === 1) {
-          console.log("inside resp.data.getFriendshipStatus.status === 1");
           if (this.props.searchId == this.state.receiver_id) {
             this.setState({ buttonText: "Cancel Potential Alliance" });
           } else {
@@ -33,7 +30,6 @@ export default class FriendshipButton extends React.Component {
           }
         }
         if (this.state.status === 2) {
-          console.log("resp.data.getFriendshipStatus.status === 2");
           this.setState({ buttonText: "Create Enemy" });
         } else {
           console.log("404 not found");
@@ -43,7 +39,6 @@ export default class FriendshipButton extends React.Component {
   }
 
   buttonTextReq() {
-    console.log("this.state.status -- ", this.state.status);
     if (this.state.status == null) {
       axios.post(`/friendshipButton/${this.props.searchId}`).then(resp => {
         this.setState(resp.data.frienshipStatusUpdate);
@@ -57,7 +52,6 @@ export default class FriendshipButton extends React.Component {
     if (this.state.status === 1) {
       if (this.state.sender_id != this.props.searchId) {
         axios.post(`/deleteFriend/${this.props.searchId}`).then(resp => {
-          console.log("resp in status 1: ", resp);
           this.setState({ buttonText: "Send Alliance Request", status: null });
         });
       } else {
