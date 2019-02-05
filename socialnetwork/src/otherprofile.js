@@ -21,22 +21,12 @@ export default class OtherProfile extends React.Component {
         this.setState(resp.data);
       }
     });
-
-    // async componentDidMount() {
-    //     const resp = await axios.get(`/getUser/${this.props.match.params.userId}`)
-    //     console.log('resp in OtherProfile :', resp);
-    // }
   }
 
   componentWillReceiveProps(nextProps) {
-    //compare nextProps to this.props
     if (nextProps.match.params.userId != this.props.match.params.userId) {
       this.fetchData(nextProps.match.params.userId);
     }
-    // } else {
-    //   console.log("same user--edit");
-    //   this.props.history.push("/");
-    // }
   }
   fetchData(userId) {
     axios.get(`/getUser/${userId}`).then(resp => {
@@ -48,7 +38,6 @@ export default class OtherProfile extends React.Component {
     location.replace(`/user/${id}`);
   }
   render() {
-    // const { bio, name, surname, url } = this.state.otherProfile;
     console.log("this.state", this.state);
     return (
       <div className="otherProfile">

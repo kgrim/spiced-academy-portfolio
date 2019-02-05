@@ -1,19 +1,14 @@
 <img class="thankYouImg" src="\photo-1503980599186-9cc36eda351a.jpg" alt="https://unsplash.com/photos/GiUJ02Yj_io">
 <div class="thanks">
-
-
     <h1><u style="color: #f97280; text-decoration: overline"> {{count}}</u> people have signed this, including you!</h1>
     <img src="{{sign}}" alt="">
 </div>
 <div class="thanksOptions">
     <a href="/signatures">take me to the signatures' page</a>
-    <!-- display how many signatures you have -->
-
     <p><a href="/editprofile">Edit Profile</a></p>
     <form class="" action="/thankyou" method="post">
         <button type="submit" name="button">Delete signature</button>
         <input type="hidden" name="_csrf" value="{{csrfToken}}">
-
     </form>
 </div>
 <a class="logout" href="/logout">Logout</a>

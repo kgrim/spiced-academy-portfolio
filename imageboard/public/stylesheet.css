@@ -14,14 +14,6 @@ body {
     animation: fade-in-top 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
-/* #inspire {
-    transition: 0.25s 0s ease-in-out;
-    font-family: "Share Tech Mono", cursive;
-    font-size: 700%;
-    margin-left: -2%;
-    margin-bottom: -1%;
-    color: DARKORANGE;
-} */
 
 #inspire {
     display: inline;
@@ -50,7 +42,6 @@ body {
     height: 99%;
     border-top: 5px double DARKORANGE;
     border-bottom: 5px double DARKORANGE;
-
     animation: fade-in-top 5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
@@ -79,7 +70,6 @@ body {
     transition: all 1s ease-in-out;
     filter: grayscale(0%);
     opacity: 1;
-    /* margin: 2%; */
     border: 2px solid DARKORANGE;
 }
 
@@ -96,7 +86,6 @@ body {
 
 .title:hover {
     transition: all 0.2s ease-in-out;
-    /* background-color: rgb(255, 255, 255, 0.5); */
     color: DARKORANGE;
     font-weight: bold;
 }
@@ -109,9 +98,7 @@ body {
 
 #pop-up {
     margin: 0;
-    *//* padding: 0; */
-        width: 100%;
-    /* height: 100%; */
+    width: 100%;
     position: fixed;
     left: 0;
     top: 0;

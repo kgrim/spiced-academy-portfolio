@@ -17,7 +17,6 @@ export default class FriendshipButton extends React.Component {
     axios.get(`/getFriendshipStatus/${this.props.searchId}`).then(resp => {
       console.log("resp in componentDidMount: ", resp.data);
       this.setState(resp.data.getFriendshipStatus);
-      // console.log('this.setState(resp.data.getFriendshipStatus--componentDidMount:', this.state);
       if (!resp.data.getFriendshipStatus.status) {
         this.setState({ buttonText: "Send Alliance Request" });
       }
@@ -48,7 +47,6 @@ export default class FriendshipButton extends React.Component {
     if (this.state.status == null) {
       axios.post(`/friendshipButton/${this.props.searchId}`).then(resp => {
         this.setState(resp.data.frienshipStatusUpdate);
-        //Import socket ++ emit
         if (this.state.sender_id != this.props.searchId) {
           this.setState({ buttonText: "Cancel Potential Alliance" });
         } else {

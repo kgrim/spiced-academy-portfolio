@@ -14,7 +14,6 @@ export default function Welcome() {
           This is the perfect platform for you, as a Villain to connect with
           other masterminds.
         </h1>
-
         <HashRouter>
           <div>
             <Route exact path="/" component={Register} />

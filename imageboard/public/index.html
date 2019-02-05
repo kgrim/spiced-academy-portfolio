@@ -5,31 +5,23 @@
     <link rel="stylesheet" href="\stylesheet.css">
 </head>
 <body>
-    <!-- <h1 id="inspire">Inspire</h1> -->
     <img id="inspire" src="./Inspire.png" alt="">
         <div id="main">
-
             <div id="upload">
-            <!-- You don't need to use a form tag -->
                 <form class="uploadImg">
-
                     <label for="">Title</label>
                     </br>
                     <input v-model="form.title" type="text" name="Title" placeholder="title" autocomplete="off">
                     </br>
-
                     <label for="">Username</label>
                     <input v-model="form.username" type="text" name="Username" placeholder="Username" autocomplete="off">
                     </br>
-
                     <label for="">Description</label>
                     <input v-model="form.description" type="text" name="Description" placeholder="Description" autocomplete="off">
                     </br>
-
                     <label for="">File</label>
                     <input type="file" accept="image/*">
                     </br>
-
                     <button id="uploadFile" v-on:click="uploadFile" type="button" name="button">Upload</button>
                 </form>
             </div>
@@ -40,31 +32,25 @@
                     <p class="title">{{img.title}}</p>
                 </div>
             </div>
-
             <imgmodal v-if="id" @close="hide" :id="id"></imgmodal>
-
             <button  v-on:click="showMore" type="button" v-if="more" name="button">Show More</button>
 
-        </div><!--  main div -->
+        </div>
     </div>
 
     <script id='popupmodal' type="text/template">
         <div id="pop-up">
             <p id="close" @click="close">X</p>
-
             <div id="popup-img-info">
                 <div id="popupimg">
                     <img v-bind:src="url">
-
                     <div id="popupinfo">
                         <p>{{title}} <b>by</b> {{username}}</p>
                         <p>{{description}}</p>
                         <p>{{created_at}}</p>
                     </div>
                 </div>
-
                 <comments-section :id="id"></comments-section>
-
             </div>
         </div>
     </script>
@@ -82,31 +68,20 @@
                 </div>
 
             </div>
-
             <form class="uploadGetComments">
                 <label for="">Comment</label>
                 <input v-model="comments.comment" type="text" name="comment" placeholder="Comment" autocomplete="off">
-
                 </br>
-
                 <label for="">Username</label>
                 <input v-model="comments.username" type="text" name="username" placeholder="Username" autocomplete="off">
-
                 </br>
-
                 <button v-on:click="uploadComment" type="button" name="button">Submit</button>
-
             </form>
-
         </div>
-
-
     </script>
-
     <script src="/js/vue.js"></script>
     <script src="/js/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/script.js"></script>
-
 </body>
 </html>

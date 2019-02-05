@@ -16,10 +16,6 @@ class currOnlineUsers extends React.Component {
     if (!this.props.onlineFriends) {
       return null;
     }
-    // console.log(
-    //   "render props in currOnlineUsers/currentonlinefriends.js: ",
-    //   this.props
-    // );
     return (
       <div className="onlineChatContainer">
         <div className="onlineContainer">
@@ -45,7 +41,6 @@ class currOnlineUsers extends React.Component {
 }
 
 const getStateFromRedux = state => {
-  // console.log("STATE::::", state.onlineFriends);
   return {
     onlineFriends: state.onlineFriends
   };

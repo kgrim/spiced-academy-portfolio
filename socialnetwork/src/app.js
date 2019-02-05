@@ -23,18 +23,11 @@ class App extends React.Component {
     this.makeUploaderInvisible = this.makeUploaderInvisible.bind(this);
     this.toggleBio = this.toggleBio.bind(this);
     this.setBio = this.setBio.bind(this);
-    // this.notification = this.notification.bind(this);
   }
   componentDidMount() {
     axios.get("/user").then(({ data }) => {
       console.log("app data :: ", data);
       this.setState(data);
-
-      // axios.get("/user").then(resp => {
-      //   console.log("resp ", resp);
-      //   const { id, name, surname, bio, url } = resp.data;
-      //   this.setState({ id, name, surname, bio, url: url });
-      // });
     });
   }
   makeUploaderVisible() {
@@ -67,7 +60,7 @@ class App extends React.Component {
         .catch(e => console.log("Error in setBio :", e));
     }
   }
-  notification() {} // dispatch the notifaction ( hide notif action that will flip the value string to faulsy val)
+  notification();
 
   render() {
     console.log("this.props.notification", this.props.notification);

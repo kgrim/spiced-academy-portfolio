@@ -56,15 +56,3 @@ exports.showImage = function(lastImageId) {
 exports.checkForLastId = function() {
     return db.query(`SELECT id FROM images ORDER BY id ASC LIMIT 1;`);
 };
-
-// `SELECT id, image, title, (
-//     SELECT id
-//     FROM images WHERE id > 2
-//     ORDER BY id DESC LIMIT 1
-// ) as prev_id
-// WHERE id = 2;`
-
-// `SELECT title, image, (
-//      SELECT id FROM images ORDER BY id ASC LIMIT 1
-//  ) as last_id FROM images WHERE id = $1;`,
-//    [totalImg];

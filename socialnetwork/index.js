@@ -422,6 +422,4 @@ io.on("connection", function(socket) {
         console.log("Error in chat:: ", e);
       });
   });
-
-  // send user id find the socket id emit the sockket id the notification
 });

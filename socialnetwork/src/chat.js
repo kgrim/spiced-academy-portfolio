@@ -7,7 +7,6 @@ class Chat extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-
     this.saveChatMsg = this.saveChatMsg.bind(this);
   }
 

@@ -218,10 +218,7 @@
                     } else if (damagedPlayer.playerNo == 4) {
                         count = 4;
                     }
-                    // console.log(
-                    //     "A PLAYER GOT DAMAGED! SHARING WITH EVERYONE ->",
-                    //     damagedPlayer
-                    // );
+
                     if (damagedPlayer.data.rightHurt) {
                         if (
                             typeof player1 != "undefined" &&
@@ -331,7 +328,6 @@
             console.log("user disconnects!", disconectedUserId);
             console.log("IMAGE DEAD 1", self.image1dead);
             players.getChildren().forEach(function(p) {
-                // console.log("p.data.list.player", p.data.list.player);
                 if (disconectedUserId == p.data.list.socketId) {
                     if (p.data.list.player == "player1") {
                         console.log("player1 userDisconnect");
@@ -794,37 +790,6 @@
             });
         } //CLOSE KICK FUNCTION
 
-        // setTimeout(function() {
-        //     if (
-        //         typeof player1 != "undefined" &&
-        //         self.socket.id == player1.data.list.socketId
-        //     ) {
-        //         jumpListener(player1);
-        //         punchListener(player1);
-        //         kickListener(player1);
-        //     } else if (
-        //         typeof player2 != "undefined" &&
-        //         self.socket.id == player2.data.list.socketId
-        //     ) {
-        //         jumpListener(player2);
-        //         punchListener(player2);
-        //         kickListener(player2);
-        //     } else if (
-        //         typeof player3 != "undefined" &&
-        //         self.socket.id == player3.data.list.socketId
-        //     ) {
-        //         jumpListener(player3);
-        //         punchListener(player3);
-        //         kickListener(player3);
-        //     } else if (
-        //         typeof player4 != "undefined" &&
-        //         self.socket.id == player4.data.list.socketId
-        //     ) {
-        //         jumpListener(player4);
-        //         punchListener(player4);
-        //         kickListener(player4);
-        //     }
-        // }, 80);
     } //CLOSES CREATE FUNCTION
 
     ///////////////////////////////////////////////////////////////////////////////////
@@ -2029,7 +1994,4 @@
             player.body.x -= platform.body.x - platform.body.prev.x;
         }
     }
-    // function makeSound(self) {
-    //     self.socket.emit("sound", "anysound");
-    // }
 })(); // CLOSE IIFE

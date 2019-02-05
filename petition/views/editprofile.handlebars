@@ -2,8 +2,6 @@
 
 <div class="edit">
 <h2>Edit your Profile</h2>
-
-
     <form method = "POST" action = '/editprofile'>
         {{#each userInfo}}
             <input name = 'name' placeholder = 'name' autocomplete="off" value="{{name}}">
@@ -15,13 +13,9 @@
             <input name = 'url' placeholder = 'url' autocomplete="off" value="{{url}}">
             <button type = 'submit'>submit!</button>
         {{/each}}
-
         <input type="hidden" name="_csrf" value="{{csrfToken}}">
      </form>
-
 </div>
 
 <a class="backLink" href="/thankyou">back</a>
-
-
 <a class="logout" href="/logout">Logout</a>

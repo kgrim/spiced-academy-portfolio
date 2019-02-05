@@ -71,12 +71,11 @@
             axios
                 .get("/comments/" + self.id)
                 .then(function(res) {
-
                     self.dialouge = res.data;
                 })
                 .catch(function(err) {
                     console.log(err);
-                }); // close function in mounted
+                });
         },
         watch: {
             id: function() {
@@ -97,7 +96,6 @@
                 let self = this;
                 console.log("self.id ", self.id);
                 console.log("this.comments: ", this.comments);
-
                 axios
                     .post("/uploadComments/" + self.id, this.comments)
                     .then(function(resp) {
@@ -111,7 +109,6 @@
         watch: {
             id: function() {
                 let self = this;
-
                 axios
                     .get("/comments/" + self.id)
                     .then(function(res) {
@@ -136,10 +133,10 @@
                 title: "",
                 username: "",
                 description: ""
-            }, // close object in data object
+            },
             id: location.hash.length > 1 && location.hash.slice(1),
             more: []
-        }, // close data object
+        },
         mounted: function() {
             window.addEventListener("hashchange", function() {
                 app.id = location.hash.slice(1);
@@ -151,31 +148,20 @@
 
                     app.images = res.data.images;
                     app.lastIdDatabase = res.data.lastIdDatabase;
-                    // if (app.lastIdDatabase < 11) {
-                    //     app.more = true;
-                    // } else {
-                    //     app.more = false;
-                    // }
                 })
                 .catch(function(err) {
                     console.log(err);
-                }); // close function in mounted
-        }, // close mounted
+                });
+        },
         methods: {
             uploadFile: function(e) {
                 e.preventDefault();
-                // console.log("vue instance: ", this.form); //'this' refers to the object that it is on. In this case app will work as well
                 var file = $('input[type="file"]').get(0).files[0];
-                // console.log("file that we just uploaded: ", file);
-
                 var formData = new FormData();
-                formData.append("file", file); // we use this only for files!
-
+                formData.append("file", file);
                 formData.append("title", this.form.title);
                 formData.append("description", this.form.description);
                 formData.append("username", this.form.username);
-
-                // console.log("formData: ", formData); // this will never display the information in it
                 axios.post("/upload", formData).then(function(resp) {
                     console.log("resp.Data ", resp.data);
                     app.images.unshift(resp.data.image);
@@ -184,7 +170,7 @@
                     app.form.username = "";
                     app.form.description = "";
                 });
-            }, //close uploadFile
+            },
             hide: function() {
                 this.id = null;
                 location.hash = "";
@@ -203,10 +189,8 @@
                     for (var i = 0; i < result.data.images.length; i++) {
                         app.images.push(result.data.images[i]);
                     }
-
                     if (app.lastIdDatabase === lastIdInResult) {
                         app.more = false;
-
                         console.log("this.more: false", app.more);
                     } else {
                         app.more = true;
@@ -214,6 +198,6 @@
                     }
                 });
             }
-        } //close methods
-    }); // close vue instance
-})(); //close iffe
+        }
+    });
+})();

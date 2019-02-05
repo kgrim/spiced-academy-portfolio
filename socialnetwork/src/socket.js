@@ -14,17 +14,14 @@ export function getSocket(store) {
     socket = io.connect();
 
     socket.on("onlineUsers", data => {
-      // console.log("data inside onlineUsers:: ", data);
       store.dispatch(receiveOnlineUsers(data));
     });
 
     socket.on("userJoined", data => {
-      // console.log("data inside userJoined:: ", data);
       store.dispatch(updateOnlineUsers(data));
     });
 
     socket.on("userLeft", id => {
-      // console.log("data inside userLeft:: ", data);
       store.dispatch(userLeft(id));
     });
 
@@ -41,9 +38,6 @@ export function getSocket(store) {
       store.dispatch(alert(notification));
     });
 
-    // socket.on("noAlert", notification => {
-    //   store.dispatch(alert(notification));
-    // });
   }
   return socket;
 }

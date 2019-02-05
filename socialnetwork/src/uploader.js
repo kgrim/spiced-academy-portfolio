@@ -1,5 +1,4 @@
 import React from "react";
-
 import axios from "./axios";
 import { Link } from "react-router-dom";
 
@@ -25,7 +24,6 @@ export default class Uploader extends React.Component {
     e.preventDefault();
     this.props.closeUploader();
   }
-
   render(props) {
     return (
       <div className="popup">

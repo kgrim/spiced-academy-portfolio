@@ -7,7 +7,6 @@ class Notifi extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-
     this.timeOut = this.timeOut.bind(this);
   }
 

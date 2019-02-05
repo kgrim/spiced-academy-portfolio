@@ -90,7 +90,6 @@ app.post("/register", (req, res) => {
     } else {
         hashPass(req.body.password)
             .then(hashCode => {
-                // console.log("Row:", hashCode);
                 return register(
                     req.body.name,
                     req.body.surname,
@@ -99,9 +98,7 @@ app.post("/register", (req, res) => {
                 );
             })
             .then(function(result) {
-                console.log("result: ", result.rows);
                 req.session.loginId = result.rows[0].id;
-
                 res.redirect("/profile");
             })
             .catch(function(err) {
@@ -123,7 +120,6 @@ app.get("/login", checkForLogin, (req, res) => {
 });
 
 app.post("/login", (req, res) => {
-    console.log("email body: ", req.body.email);
     if (!req.body.email.length || !req.body.password.length) {
         res.render("login", {
             error: true
@@ -137,7 +133,6 @@ app.post("/login", (req, res) => {
                 ).then(doesMatch => {
                     if (doesMatch) {
                         req.session.loginId = result.rows[0].id;
-
                         return getSigByUserId(req.session.loginId).then(
                             sigInitialId => {
                                 if (!sigInitialId.rows.length) {
@@ -272,7 +267,6 @@ app.post("/editprofile", (req, res) => {
                     )
                 ])
                     .then(() => {
-                        console.log("HAshed password:", hashedPassword);
                         res.redirect("/thankyou");
                     })
                     .catch(err => {
@@ -294,7 +288,6 @@ app.post("/editprofile", (req, res) => {
             editUserProfilesDb(age, city, newProfileUrl, req.session.loginId)
         ])
             .then(() => {
-                console.log("In edit no password re-direct");
                 res.redirect("/thankyou");
             })
             .catch(err => {

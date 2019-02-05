@@ -1,12 +1,8 @@
-<div class="colorBlock">
-</div>
-
+<div class="colorBlock"></div>
 <h2 id="profileTitle"><u style="color: white">We would like to know you</u> a bit <u style="color: #31a57e; text-decoration: overline">better!</u></h2>
-
 <p id="furtherInfo">
     Just a couple more details about yourself... don't worry as it is not obligatory and can be changed later on..
 </p>
-
 <div class="profile">
 <form method = "POST" action = '/profile'>
         <input name = 'age' placeholder = 'age' autocomplete="off">
@@ -15,5 +11,4 @@
         <button type = 'submit'>proceed</button>
         <input type="hidden" name="_csrf" value="{{csrfToken}}">
       </form>
-
 </div>

@@ -4,7 +4,6 @@ export function receiveFriendsWannabes(id) {
   return axios
     .get(`/getWannabeFriends/${id}`)
     .then(resp => {
-      // console.log("resp in getFriendshipStatus/Actions.js:", resp);
       return {
         type: "RECEIVE_FRIENDS_WANNABES",
         friends: resp.data.rows
@@ -48,7 +47,6 @@ export function receiveOnlineUsers(data) {
 }
 
 export function updateOnlineUsers(data) {
-  // console.log("Data inside Actions.js/ receiveOnlineUsers:: ", data);
   return {
     type: "UPDATE_ONLINE_FRIENDS",
     data
@@ -56,7 +54,6 @@ export function updateOnlineUsers(data) {
 }
 
 export function userLeft(id) {
-  // console.log("Data inside Actions.js/ userLeft:: ", id);
   return {
     type: "USER_LEFT",
     id
@@ -71,7 +68,6 @@ export function chatMessages(recentMessages) {
 }
 
 export function chatMessage(latestMessage) {
-  console.log("latestMessage :: ", latestMessage);
   return {
     type: "CHAT_MESSAGE",
     latestMessage: latestMessage

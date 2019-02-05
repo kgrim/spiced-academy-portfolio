@@ -12,7 +12,6 @@ export default class Register extends React.Component {
   }
   handleChange(e) {
     this[e.target.name] = e.target.value;
-    // console.log(this[e.target.name]);
   }
 
   submit() {
@@ -33,7 +32,6 @@ export default class Register extends React.Component {
         }
       });
   }
-
   render() {
     return (
       <div className="register">

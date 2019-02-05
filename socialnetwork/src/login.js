@@ -12,7 +12,6 @@ export default class Login extends React.Component {
   }
   handleChange(e) {
     this[e.target.name] = e.target.value;
-    // console.log(this[e.target.name]);
   }
 
   submit() {

@@ -1,32 +1,17 @@
 <div class="sigImg">
-
     <p id="panQuote">One must not trust anyone who burns pancakes!</p>
-
     <img class="pancakes" src="\pancakes.jpg" alt="https://i.ytimg.com/vi/CVQ8cg_WIwY/maxresdefault.jpg">
-
-
     <img class="dog"src="\czako_zagat22.jpg" alt="">
     <p id="dogQuote">Even the dog seems to be uncertain...</p>
-
 </div>
 
 <div class="typewriter">
-
-
 <h1>Here are the people who signed for this...
  </h1>
-
-
  </div>
-
 <div class="signers">
-
-
-
     {{#if cityLink}}s
-
       {{#each petitioners}}
-
         <p>
           {{#if url}}<a href="{{url}}" target="_blank" style="text-decoration: overline">
            {{name}} {{surname}}</a>
@@ -37,7 +22,6 @@
         </p>
       {{/each}}
     {{else}}
-
       {{#each petitioners}}
              <p>
                {{#if url}}<a href="{{url}}" target="_blank" style="text-decoration: overline">
@@ -56,6 +40,4 @@
 </div>
 
 <a class="backLink" href="/thankyou">back</a>
-
-
 <a class="logout" href="/logout">Logout</a>

@@ -1,7 +1,5 @@
 const canvas = document.getElementById("canvas");
-// canvas.style.border = "1px solid white";
 const c = canvas.getContext("2d");
-
 c.strokeStyle = "slategray";
 var x;
 var y;

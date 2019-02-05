@@ -13,7 +13,7 @@ class Friends extends React.Component {
     this.goToProfile = this.goToProfile.bind(this);
   }
   componentDidMount() {
-    this.props.dispatch(receiveFriendsWannabes()); // whatever function is called has to exist in the actions.js
+    this.props.dispatch(receiveFriendsWannabes());
   }
   goToProfile(id) {
     location.replace(`/user/${id}`);
@@ -107,5 +107,3 @@ const getStateFromRedux = state => {
   };
 };
 export default connect(getStateFromRedux)(Friends);
-
-//////////////////////////////////////////////////////////

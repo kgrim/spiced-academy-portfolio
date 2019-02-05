@@ -49,7 +49,6 @@ io.on("connection", function(socket) {
             socketId: socket.id
         };
     }
-    // console.log("PLAYERS-------------->", players);
 
     // send the players object to the new player
     socket.emit("currentPlayers", players);
@@ -60,26 +59,21 @@ io.on("connection", function(socket) {
         delete players[socket.id];
         playerCount -= 1;
         console.log(`user disconnected: ${socket.id}`);
-        // console.log("PLAYERS REMAINING ----------->", players);
         io.emit("userDisconnect", socket.id);
     });
     socket.on("playerMovement", function(movementData) {
-        // console.log(movementData);
         players[socket.id].x = movementData.x;
         players[socket.id].y = movementData.y;
         players[socket.id].data = movementData.data;
-        // console.log("moving", players[socket.id]);
         socket.broadcast.emit("playerMoved", players[socket.id]);
     });
     socket.on("playerDamaged", function(damagedPlayer) {
         var enemySocketId = damagedPlayer.enemyData.socketId;
         players[enemySocketId].data = damagedPlayer.enemyData;
         console.log(damagedPlayer);
-        // console.log("moving", players[socket.id]);
         io.sockets.emit("damagedPlayer", players[enemySocketId]);
     });
     socket.on("playerDeath", function(player) {
-        // console.log("player which died->", player);
         players[socket.id].data.lives = player.lives;
         io.sockets.emit("playerDied", players[socket.id]);
     });

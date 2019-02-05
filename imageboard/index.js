@@ -1,15 +1,15 @@
-var multer = require("multer"); // it will upload the actual files to our computer
-var uidSafe = require("uid-safe"); // will take the file and gives it a unique name
-var path = require("path"); //
+var multer = require("multer");
+var uidSafe = require("uid-safe");
+var path = require("path");
 
 var diskStorage = multer.diskStorage({
     destination: function(req, file, callback) {
         callback(null, __dirname + "/uploads");
-    }, //what directy will it save into, in this case it is in directy /uploads
+    },
     filename: function(req, file, callback) {
         uidSafe(24).then(function(uid) {
             callback(null, uid + path.extname(file.originalname));
-        }); // this will create a completely new name and it will have 24char as stated as an argument in uidSafe(24)
+        });
     }
 });
 
@@ -18,9 +18,8 @@ var uploader = multer({
     limits: {
         fileSize: 2097152
     }
-}); // takes the diskStorage and will upload and pasing a limit of a file size
+});
 
-// FILE UPLOAD boilerplate
 const config = require("./config");
 
 const express = require("express");
@@ -48,8 +47,6 @@ app.get("/imageboard", (req, res) => {
                 images: resultImg.rows,
                 lastIdDatabase: resultCheck.rows[0].id
             });
-            console.log("images:", resultImg.rows);
-            console.log("lastIdDatabase:", resultCheck.rows);
         })
         .catch(err => {
             console.log("get Imageboard error: ", err);
@@ -57,8 +54,6 @@ app.get("/imageboard", (req, res) => {
 });
 
 app.post("/upload", uploader.single("file"), upload, (req, res) => {
-    console.log("Req.File: ", req.file); // you just need the filename
-    console.log("req.body: ", req.body); // info about the title, description & username
     if (req.file) {
         saveFile(
             config.s3Url + req.file.filename,
@@ -74,9 +69,9 @@ app.post("/upload", uploader.single("file"), upload, (req, res) => {
             .catch(() => {
                 res.json();
                 res.sendStatus(500);
-            }); // close catch
-    } // close if statement (req.file)
-}); // app.post for the Upload
+            });
+    }
+});
 
 app.get("/image/:id", (req, res) => {
     getInfoForPopUp(req.params.id)
@@ -93,7 +88,6 @@ app.get("/image/:id", (req, res) => {
 
 app.get("/comments/:id", (req, res) => {
     getComments(req.params.id).then(result => {
-        console.log(result.rows);
         res.json(result.rows);
     });
 });
@@ -101,7 +95,6 @@ app.get("/comments/:id", (req, res) => {
 app.post("/uploadComments/:id", (req, res) => {
     saveComment(req.params.id, req.body.comment, req.body.username)
         .then(result => {
-            console.log("ROWSSSSS 2: ", result.rows);
             res.json(result.rows);
         })
         .catch(err => {
@@ -109,12 +102,10 @@ app.post("/uploadComments/:id", (req, res) => {
             res.status(500).json({
                 success: false
             });
-            // res.
-        }); // close catch
-}); // app.post for the Upload
+        });
+});
 
 app.get("/getmore/:lastId", (req, res) => {
-    console.log("In the get more route!!");
     Promise.all([showImage(req.params.lastId), checkForLastId()]).then(
         ([result, resultId]) => {
             res.json({ images: result.rows, id: resultId.rows[0].id });
